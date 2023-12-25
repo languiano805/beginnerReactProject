@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import Button from "./components/Button";
-import Alert from "./components/Alert";
+import ListGroup from "./components/ListGroup";
 
 function App() {
-  const [alertVisible, setAlertVisible] = useState(false);
+
+  let cities = ["New York", "London", "Paris", "Tokyo", "Sydney"];
+  
   return (
     <div>
-      {alertVisible && (
-        <Alert onClose={() => setAlertVisible(false)}>Hello</Alert>
-      )}
-      <Button onClick={() => setAlertVisible(true)}></Button>
+      <ListGroup items={cities} heading={"Cities"} onSelectItem={function (item: string): void {
+        throw new Error("Function not implemented.");
+      } } ></ListGroup>
     </div>
   );
 }
