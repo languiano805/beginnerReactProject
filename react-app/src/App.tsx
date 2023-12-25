@@ -1,15 +1,12 @@
 import React, { useState } from "react";
-import ListGroup from "./components/ListGroup";
+import LikeButton from "./components/LikeButton/LikeButton";
 
 function App() {
+  const [activeItem, setActiveItem] = useState(false);
 
-  let cities = ["New York", "London", "Paris", "Tokyo", "Sydney"];
-  
   return (
     <div>
-      <ListGroup items={cities} heading={"Cities"} onSelectItem={function (item: string): void {
-        throw new Error("Function not implemented.");
-      } } ></ListGroup>
+      <LikeButton active={activeItem} onClick={() => setActiveItem(!activeItem)} />
     </div>
   );
 }

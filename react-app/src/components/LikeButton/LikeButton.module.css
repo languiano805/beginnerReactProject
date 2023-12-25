@@ -1,0 +1,10 @@
+.LikeButton{
+    background-color: transparent;
+    text-decoration: none;
+    border: none;
+}
+
+.LikeButton:hover{
+    cursor: pointer;
+}
+
