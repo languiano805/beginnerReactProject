@@ -3,28 +3,26 @@ import Message from "./components/Message"; // Import the Message component
 import produce from "immer";
 import NavBar from "./components/NavBar";
 import Cart from "./components/Cart";
+import ExpandableText from "./components/ExpandableText";
 
 function App() {
-  const [cart, setCart] = useState({
-    discount: 0.1,
-    items: [
-      { id: 1, title: "Product 1", quantity: 1 },
-      { id: 2, title: "Product 2", quantity: 1 },
-    ],
-  });
-
-  const handleClick = () => {
-    setCart({
-      ...cart,
-      items: cart.items.map((item) =>
-        item.id === 1 ? { ...item, quantity: 2 } : item
-      ),
-    });
-  };
-
   return (
     <div>
-      <button onClick={handleClick}>Click</button>
+      <ExpandableText>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos qui
+        voluptatem, dolorem nam quas repellat laboriosam fuga eveniet at magni
+        ducimus. Voluptas provident autem veritatis nam beatae, enim debitis
+        laboriosam. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Itaque laborum, error officia magni ratione totam vel! Accusantium,
+        sequi quis asperiores, nihil et porro officiis obcaecati rem esse nam,
+        dolore non. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Natus eaque pariatur dolore esse, enim similique ea voluptatibus
+        delectus rerum modi reprehenderit, eos officia, est repellendus a. Quasi
+        repellendus minus numquam. Lorem, ipsum dolor sit amet consectetur
+        adipisicing elit. Incidunt repellendus sequi vitae provident tenetur
+        perferendis minima magnam eum voluptate id neque maiores, expedita
+        repellat? Incidunt, vel autem? Delectus, tempora eius?
+      </ExpandableText>
     </div>
   );
 }
